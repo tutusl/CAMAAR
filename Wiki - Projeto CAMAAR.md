@@ -94,5 +94,3 @@ Desenvolver um sistema para gerenciar e avaliar o desempenho das turmas, matéri
 - [Guia de Markdown](https://guides.github.com/features/mastering-markdown/)
 
 ---
-
-Se precisar de ajustes ou mais detalhes em alguma seção, é só pedir! 😊
