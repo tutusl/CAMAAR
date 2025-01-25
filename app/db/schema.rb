@@ -84,11 +84,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
 
   create_table "usuarios", force: :cascade do |t|
     t.string "matricula", null: false
-    t.integer "curso_id", null: false
+    t.integer "curso_id"
     t.integer "departamento_id", null: false
     t.string "nome", null: false
     t.string "email", null: false
-    t.string "senha", null: false
+    t.string "password_digest", null: false
     t.string "papel", null: false
     t.string "formacao", null: false
     t.datetime "created_at", null: false
