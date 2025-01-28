@@ -1,20 +1,17 @@
 <div class="container">
-  <h1>Login</h1>
-  <%= form_with(url: sessions_path, method: :post, local: true) do |form| %>
-    <div class="form-group">
+  <%= form_with url: sessions_path, method: :post, local: true, html: {class: "form-login"} do |form| %>
+    <h1 class="form-login-header">CAMAAR</h1>
+    <p class="form-login-text">Faça seu login</p>
+    <div class="form-login-group">
       <%= form.label :email, "Email" %>
-      <%= form.email_field :email, class: "form-control", placeholder: "Digite seu email", required: true %>
+      <%= form.email_field :email, class: "form-login-control", placeholder: "Digite seu email", required: true %>
     </div>
-    <div class="form-group">
+    <div class="form-login-group">
       <%= form.label :password, "Senha" %>
-      <%= form.password_field :password, class: "form-control", placeholder: "Digite sua senha", required: true %>
+      <%= form.password_field :password, class: "form-login-control", placeholder: "Digite sua senha", required: true %>
     </div>
-    <div class="form-group">
-      <%= form.label :password_confirmation, "Confirme sua senha" %>
-      <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Confirme sua senha", required: true %>
-    </div>
-    <div class="form-group">
-      <%= form.submit "Entrar", class: "btn btn-primary" %>
+    <div class="form-login-group">
+      <%= form.submit "Entrar", class: "form-login-btn" %>
     </div>
   <% end %>
 </div>

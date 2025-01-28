@@ -22,7 +22,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="<%= "#{controller_name} #{action_name}" %>">
     <%= yield %>
   </body>
 </html>
