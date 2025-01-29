@@ -5,7 +5,7 @@ class Usuario < ApplicationRecord
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "E-mail inválido." }
   validates :papel, presence: true
   validates :formacao, presence: true
-  validates :idDepartamento, presence: true
+  validates :departamento_id, presence: true
   belongs_to :departamento, class_name: "Departamento"
   belongs_to :curso, class_name: "Curso", optional: true
   has_many :usuario_turmas

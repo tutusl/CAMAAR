@@ -12,7 +12,7 @@ class UsuariosController < ApplicationController
   def new
     # Recupera as informações do PendingUser pelo token
     @pending_user = PendingUser.find_by(token: params[:token])
-
+    puts "oks"
     if @pending_user && !@pending_user.token_expired?
       render :new
     else
@@ -24,7 +24,9 @@ class UsuariosController < ApplicationController
   def create
     # Recupera o usuário temporário
     pending_user = PendingUser.find_by(token: params[:token])
-    
+    puts "eba"
+    puts pending_user.email
+    puts pending_user.departamento
     if pending_user&.token_expired?
       flash.now[:alert] = 'Token inválido ou expirado.'
       render :new, status: :unprocessable_entity and return
@@ -32,7 +34,7 @@ class UsuariosController < ApplicationController
     if params[:password] == params[:password_confirmation]
       curso = Curso.find_by(nomeCurso: pending_user.curso) if pending_user.curso.present?
       departamento = Departamento.find_by(nomeDepartamento: pending_user.departamento)
-
+      
       unless departamento
         flash.now[:alert] = 'Departamento inválido.'
         render :new, status: :unprocessable_entity and return
