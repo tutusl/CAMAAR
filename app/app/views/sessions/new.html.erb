@@ -1,0 +1,17 @@
+<div class="container">
+  <%= form_with url: sessions_path, method: :post, local: true, html: {class: "form-login"} do |form| %>
+    <h1 class="form-login-header">CAMAAR</h1>
+    <p class="form-login-text">Faça seu login</p>
+    <div class="form-login-group">
+      <%= form.label :email, "Email" %>
+      <%= form.email_field :email, class: "form-login-control", placeholder: "Digite seu email", required: true %>
+    </div>
+    <div class="form-login-group">
+      <%= form.label :password, "Senha" %>
+      <%= form.password_field :password, class: "form-login-control", placeholder: "Digite sua senha", required: true %>
+    </div>
+    <div class="form-login-group">
+      <%= form.submit "Entrar", class: "form-login-btn" %>
+    </div>
+  <% end %>
+</div>
