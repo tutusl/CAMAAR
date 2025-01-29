@@ -1,0 +1,38 @@
+services:
+  app:
+    build:
+      context: .
+    env_file:
+      - .env
+    volumes:
+      - .:/rails
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  test:
+    build:
+      context: .
+    env_file:
+      - .env
+    volumes:
+      - .:/rails
+    depends_on:
+      - db
+    entrypoint: ["bundle", "exec"]
+    command: ["rspec"]  # Default command (can be overridden)
+    profiles:
+      - test
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: myapp_development
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
