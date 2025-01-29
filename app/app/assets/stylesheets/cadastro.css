@@ -1,0 +1,8 @@
+body.usuarios.new {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0F1A2B;
+}
