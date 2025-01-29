@@ -3,4 +3,4 @@ class Curso < ApplicationRecord
     
     validates :idCurso, presence: true, uniqueness: true
     validates :nomeCurso, presence: true
-  end
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_28_191657) do
   create_table "cursos", force: :cascade do |t|
     t.string "nomeCurso", null: false
     t.datetime "created_at", null: false
@@ -40,6 +40,20 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["template_id"], name: "index_formularios_on_template_id"
+  end
+
+  create_table "pending_users", force: :cascade do |t|
+    t.string "nome"
+    t.string "email"
+    t.string "matricula"
+    t.string "curso"
+    t.string "departamento"
+    t.string "papel"
+    t.string "formacao"
+    t.string "token"
+    t.datetime "token_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "questaos", force: :cascade do |t|
