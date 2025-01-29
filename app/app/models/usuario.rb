@@ -11,4 +11,5 @@ class Usuario < ApplicationRecord
   has_many :usuario_turmas
   has_many :turmas, through: :usuario_turmas
   has_many :respostas
+  private
 end
