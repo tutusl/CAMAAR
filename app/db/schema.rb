@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_catalog.plpgsql"
+
   create_table "cursos", force: :cascade do |t|
     t.string "nomeCurso", null: false
     t.datetime "created_at", null: false
@@ -25,7 +28,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
 
   create_table "disciplinas", id: false, force: :cascade do |t|
     t.string "codigoDisciplina", null: false
-    t.integer "departamento_id", null: false
+    t.bigint "departamento_id", null: false
     t.string "nomeDisciplina", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -34,7 +37,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
   end
 
   create_table "formularios", force: :cascade do |t|
-    t.integer "template_id", null: false
+    t.bigint "template_id", null: false
     t.datetime "dataCriacao", precision: nil, null: false
     t.string "tipoDestinatario", null: false
     t.datetime "created_at", null: false
@@ -43,7 +46,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
   end
 
   create_table "questaos", force: :cascade do |t|
-    t.integer "template_id", null: false
+    t.bigint "template_id", null: false
     t.text "enunciado", null: false
     t.string "tipoQuestao", null: false
     t.datetime "created_at", null: false
@@ -52,9 +55,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
   end
 
   create_table "respostas", force: :cascade do |t|
-    t.integer "usuario_id", null: false
-    t.integer "formulario_id", null: false
-    t.integer "questao_id", null: false
+    t.bigint "usuario_id", null: false
+    t.bigint "formulario_id", null: false
+    t.bigint "questao_id", null: false
     t.datetime "dataResposta", precision: nil, null: false
     t.text "valorResposta", null: false
     t.datetime "created_at", null: false
@@ -84,8 +87,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
 
   create_table "usuarios", force: :cascade do |t|
     t.string "matricula", null: false
-    t.integer "curso_id"
-    t.integer "departamento_id", null: false
+    t.bigint "curso_id"
+    t.bigint "departamento_id", null: false
     t.string "nome", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
