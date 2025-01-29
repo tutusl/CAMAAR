@@ -8,5 +8,8 @@ class Usuario < ApplicationRecord
   validates :departamento_id, presence: true
   belongs_to :departamento, class_name: "Departamento"
   belongs_to :curso, class_name: "Curso", optional: true
-
+  has_many :usuario_turmas
+  has_many :turmas, through: :usuario_turmas
+  has_many :respostas
+  private
 end

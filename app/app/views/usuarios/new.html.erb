@@ -1,0 +1,20 @@
+<div class="container">
+  <%= form_with url: usuarios_path, method: :post, local: true, html: {class: "form-login"} do |form| %>
+    <h1 class="form-login-header">CAMAAR</h1>
+    <p class="form-login-text">Por favor, defina uma senha.</p>
+
+    <%= hidden_field_tag :token, params[:token] %>
+
+    <div class="form-login-group">
+      <%= form.label :password, "Criar Senha" %>
+      <%= form.password_field :password, class: "form-login-control", placeholder: "Digite sua senha", required: true %>
+    </div>
+    <div class="form-login-group">
+      <%= form.label :password_confirmation, "Repita a Senha" %>
+      <%= form.password_field :password_confirmation, class: "form-login-control", placeholder: "Repita sua senha", required: true %>
+    </div>
+    <div class="form-login-group">
+      <%= form.submit "Enviar", class: "form-login-btn" %>
+    </div>
+  <% end %>
+</div>
