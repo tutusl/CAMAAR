@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_31_012844) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -34,6 +34,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
     t.datetime "updated_at", null: false
     t.index ["codigoDisciplina"], name: "index_disciplinas_on_codigoDisciplina", unique: true
     t.index ["departamento_id"], name: "index_disciplinas_on_departamento_id"
+  end
+
+  create_table "formulario_turmas", id: false, force: :cascade do |t|
+    t.bigint "turma_id", null: false
+    t.bigint "formulario_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["turma_id", "formulario_id"], name: "index_formulario_turmas_on_turma_id_and_formulario_id", unique: true
   end
 
   create_table "formularios", force: :cascade do |t|
@@ -117,6 +125,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_24_122332) do
   end
 
   add_foreign_key "disciplinas", "departamentos"
+  add_foreign_key "formulario_turmas", "formularios"
+  add_foreign_key "formulario_turmas", "turmas"
   add_foreign_key "formularios", "templates"
   add_foreign_key "questaos", "templates"
   add_foreign_key "respostas", "formularios"

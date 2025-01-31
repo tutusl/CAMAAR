@@ -1,0 +1,165 @@
+{
+    "usuarios": [
+      {
+        "nome": "Ana Clara Jordão Perna",
+        "email": "ana.perna@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+      },
+      {
+        "nome": "André Carvalho Marques",
+        "email": "andre.marques@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Engenharia Elétrica",
+        "nomeCurso": "ENGENHARIA ELÉTRICA/ENE"
+      },
+      {
+        "nome": "Arthur Barreiros de Oliveira Mota",
+        "email": "arthur.mota@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Engenharia Mecânica",
+        "nomeCurso": "ENGENHARIA MECATRÔNICA/FT"
+      },
+      {
+        "nome": "Bianca Glycia Boueri",
+        "email": "bianca.boueri@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Administração",
+        "nomeCurso": "ADMINISTRAÇÃO/FACE"
+      },
+      {
+        "nome": "Caio Otávio Peluti Alencar",
+        "email": "caio.alencar@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+      },
+      {
+        "nome": "Camila Frealdo Fraga",
+        "email": "camila.fraga@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Economia",
+        "nomeCurso": "ECONOMIA/FACE"
+      },
+      {
+        "nome": "Davi de Moura Amaral",
+        "email": "davi.amaral@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Matemática",
+        "nomeCurso": "MATEMÁTICA/EST"
+      },
+      {
+        "nome": "Eduardo Xavier Dantas",
+        "email": "eduardo.dantas@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Engenharia Civil e Ambiental",
+        "nomeCurso": "ENGENHARIA CIVIL/ENC"
+      },
+      {
+        "nome": "Enzo Yoshio Niho",
+        "email": "enzo.niho@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Faculdade de Direito",
+        "nomeCurso": "DIREITO/FD"
+      },
+      {
+        "nome": "Gabriel Faustino Lima da Rocha",
+        "email": "gabriel.rocha@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Faculdade de Medicina",
+        "nomeCurso": "MEDICINA/FM"
+      },
+      {
+        "nome": "Gabriel Ligoski",
+        "email": "gabriel.ligoski@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+      },
+      {
+        "nome": "Gustavo Rodrigues dos Santos",
+        "email": "gustavo.santos@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+      },
+      {
+        "nome": "Jefte Augusto Gomes Batista",
+        "email": "jefte.batista@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+      },
+      {
+        "nome": "Maria Eduarda Carvalho Santos",
+        "email": "maria.santos@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+      },
+      {
+        "nome": "Pedro Cesar Ribeiro Passos",
+        "email": "pedro.passos@email.com",
+        "papel": "discente",
+        "formacao": "graduando",
+        "nomeDepartamento": "Departamento de Engenharia Mecânica",
+        "nomeCurso": "ENGENHARIA MECATRÔNICA/FT"
+      },
+      {
+        "nome": "Prof. Maristela Terto de Holanda",
+        "email": "mholanda@unb.br",
+        "papel": "docente",
+        "formacao": "doutorado",
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": null
+      },
+      {
+        "nome": "Prof. João Carlos Mendes",
+        "email": "joao.mendes@unb.br",
+        "papel": "docente",
+        "formacao": "doutorado",
+        "nomeDepartamento": "Departamento de Engenharia Elétrica",
+        "nomeCurso": null
+      },
+      {
+        "nome": "Prof. Lúcia Helena Freitas",
+        "email": "lucia.freitas@unb.br",
+        "papel": "docente",
+        "formacao": "doutorado",
+        "nomeDepartamento": "Faculdade de Direito",
+        "nomeCurso": null
+      },
+      {
+        "nome": "Administrador Carlos Henrique",
+        "email": "carlos.henrique@unb.br",
+        "papel": "administrador",
+        "formacao": null,
+        "nomeDepartamento": "Departamento de Ciências da Computação",
+        "nomeCurso": null
+      },
+      {
+        "nome": "Administrador Fernanda Lima",
+        "email": "fernanda.lima@unb.br",
+        "papel": "administrador",
+        "formacao": null,
+        "nomeDepartamento": "Faculdade de Medicina",
+        "nomeCurso": null
+      }
+    ]
+  }
+  
