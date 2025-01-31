@@ -1,0 +1,45 @@
+{
+    "cursos": [
+      {
+        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC",
+        "nomeDepartamento": "Departamento de Ciências da Computação"
+      },
+      {
+        "nomeCurso": "ENGENHARIA DE COMPUTAÇÃO/CIC",
+        "nomeDepartamento": "Departamento de Ciências da Computação"
+      },
+      {
+        "nomeCurso": "ENGENHARIA ELÉTRICA/ENE",
+        "nomeDepartamento": "Departamento de Engenharia Elétrica"
+      },
+      {
+        "nomeCurso": "ENGENHARIA MECATRÔNICA/FT",
+        "nomeDepartamento": "Departamento de Engenharia Mecânica"
+      },
+      {
+        "nomeCurso": "ADMINISTRAÇÃO/FACE",
+        "nomeDepartamento": "Departamento de Administração"
+      },
+      {
+        "nomeCurso": "ECONOMIA/FACE",
+        "nomeDepartamento": "Departamento de Economia"
+      },
+      {
+        "nomeCurso": "MATEMÁTICA/EST",
+        "nomeDepartamento": "Departamento de Matemática"
+      },
+      {
+        "nomeCurso": "ENGENHARIA CIVIL/ENC",
+        "nomeDepartamento": "Departamento de Engenharia Civil e Ambiental"
+      },
+      {
+        "nomeCurso": "DIREITO/FD",
+        "nomeDepartamento": "Faculdade de Direito"
+      },
+      {
+        "nomeCurso": "MEDICINA/FM",
+        "nomeDepartamento": "Faculdade de Medicina"
+      }
+    ]
+  }
+  

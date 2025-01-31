@@ -1,0 +1,55 @@
+{
+    "disciplinas": [
+      {
+        "codigoDisciplina": "CIC0105",
+        "nomeDisciplina": "ENGENHARIA DE SOFTWARE",
+        "nomeDepartamento": "Departamento de Ciências da Computação"
+      },
+      {
+        "codigoDisciplina": "CIC0097",
+        "nomeDisciplina": "BANCOS DE DADOS",
+        "nomeDepartamento": "Departamento de Ciências da Computação"
+      },
+      {
+        "codigoDisciplina": "CIC0202",
+        "nomeDisciplina": "PROGRAMAÇÃO CONCORRENTE",
+        "nomeDepartamento": "Departamento de Ciências da Computação"
+      },
+      {
+        "codigoDisciplina": "ENE0032",
+        "nomeDisciplina": "CIRCUITOS ELÉTRICOS",
+        "nomeDepartamento": "Departamento de Engenharia Elétrica"
+      },
+      {
+        "codigoDisciplina": "ENE0043",
+        "nomeDisciplina": "ELETRÔNICA ANALÓGICA",
+        "nomeDepartamento": "Departamento de Engenharia Elétrica"
+      },
+      {
+        "codigoDisciplina": "FTD0025",
+        "nomeDisciplina": "SISTEMAS DE CONTROLE",
+        "nomeDepartamento": "Departamento de Engenharia Mecânica"
+      },
+      {
+        "codigoDisciplina": "ADM0034",
+        "nomeDisciplina": "GESTÃO ESTRATÉGICA",
+        "nomeDepartamento": "Departamento de Administração"
+      },
+      {
+        "codigoDisciplina": "ECO0041",
+        "nomeDisciplina": "MICROECONOMIA",
+        "nomeDepartamento": "Departamento de Economia"
+      },
+      {
+        "codigoDisciplina": "MAT0023",
+        "nomeDisciplina": "CÁLCULO NUMÉRICO",
+        "nomeDepartamento": "Departamento de Matemática"
+      },
+      {
+        "codigoDisciplina": "DIR0065",
+        "nomeDisciplina": "DIREITO CONSTITUCIONAL",
+        "nomeDepartamento": "Faculdade de Direito"
+      }
+    ]
+  }
+  

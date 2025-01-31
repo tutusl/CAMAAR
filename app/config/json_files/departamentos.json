@@ -1,0 +1,20 @@
+{
+    "departamentos": [
+      {
+        "nomeDepartamento": "Departamento de Ciências da Computação"
+      },
+      {
+        "nomeDepartamento": "Departamento de Engenharia Elétrica"
+      },
+      {
+        "nomeDepartamento": "Departamento de Administração"
+      },
+      {
+        "nomeDepartamento": "Departamento de Economia"
+      },
+      {
+        "nomeDepartamento": "Departamento de Matemática"
+      }
+    ]
+  }
+  

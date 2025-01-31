@@ -1,0 +1,85 @@
+.container-respostas {
+    margin-left: 270px; /* Ajuste para a sidebar */
+    padding: 30px;
+    max-width: calc(100% - 270px);
+  }
+  
+  h2 {
+    color: #2C3E50;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid das avaliações */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  /* Cartões das avaliações */
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #34495E;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #7F8C8D;
+  }
+  
+  .btn-primary {
+    background-color: #2980B9;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1F618D;
+  }
+  
+  /* Mensagem "Sem formulários disponíveis" */
+  .alert-info {
+    background-color: #D6EAF8;
+    color: #2C3E50;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ajuste responsivo */
+  @media (max-width: 768px) {
+    .container-respostas {
+      margin-left: 220px;
+      max-width: calc(100% - 220px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .sidebar {
+      width: 180px;
+    }
+  
+    .container-respostas {
+      margin-left: 190px;
+      max-width: calc(100% - 190px);
+      padding: 20px;
+    }
+  }

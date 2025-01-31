@@ -1,6 +1,6 @@
 class UsuariosController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create]
-  
+  skip_before_action :require_login, only: [ :new, :create ]
+
   def index
     @usuarios = Usuario.all
   end
@@ -15,24 +15,24 @@ class UsuariosController < ApplicationController
     if @pending_user && !@pending_user.token_expired?
       render :new
     else
-      redirect_to root_path, alert: 'Link inválido ou expirado.'
+      redirect_to root_path, alert: "Link inválido ou expirado."
     end
   end
-  
-  
+
+
   def create
     # Recupera o usuário temporário
     pending_user = PendingUser.find_by(token: params[:token])
     if pending_user&.token_expired?
-      flash.now[:alert] = 'Token inválido ou expirado.'
+      flash.now[:alert] = "Token inválido ou expirado."
       render :new, status: :unprocessable_entity and return
     end
     if params[:password] == params[:password_confirmation]
       curso = Curso.find_by(nomeCurso: pending_user.curso) if pending_user.curso.present?
       departamento = Departamento.find_by(nomeDepartamento: pending_user.departamento)
-      
+
       unless departamento
-        flash.now[:alert] = 'Departamento inválido.'
+        flash.now[:alert] = "Departamento inválido."
         render :new, status: :unprocessable_entity and return
       end
 
@@ -78,19 +78,17 @@ class UsuariosController < ApplicationController
   end
 
   def self.cadastra_usuarios(usuarios_data)
-    puts "Método cadastra_usuarios foi chamado!"
     usuarios_data.each do |usuario|
       %w[dicente docente].each do |tipo|
         usuario[tipo].each do |pessoa|
-          atributos_permitidos = [:nome, :email, :matricula, :curso, :departamento, :papel, :formacao] # Ajuste conforme a tabela
+          atributos_permitidos = [ :nome, :email, :matricula, :curso, :departamento, :papel, :formacao ] # Ajuste conforme a tabela
           pessoa = pessoa.symbolize_keys
-          puts "Criando usuário: #{pessoa.inspect}" # Verifica se os dados estão corretos0
-          PendingUser.create(pessoa.slice(*atributos_permitidos))        
+          PendingUser.create(pessoa.slice(*atributos_permitidos))
         end
       end
     end
   end
-  
+
 
   private
 

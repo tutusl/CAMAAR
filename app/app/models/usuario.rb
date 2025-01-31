@@ -11,5 +11,8 @@ class Usuario < ApplicationRecord
   has_many :usuario_turmas
   has_many :turmas, through: :usuario_turmas
   has_many :respostas
-  private
+
+  def admin?
+    self.papel == "administrador"
+  end
 end
