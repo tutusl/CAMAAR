@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_31_012844) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_31_011119) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -36,12 +36,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_31_012844) do
     t.index ["departamento_id"], name: "index_disciplinas_on_departamento_id"
   end
 
-  create_table "formulario_turmas", id: false, force: :cascade do |t|
+  create_table "formulario_turmas", force: :cascade do |t|
     t.bigint "turma_id", null: false
     t.bigint "formulario_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["formulario_id"], name: "index_formulario_turmas_on_formulario_id"
     t.index ["turma_id", "formulario_id"], name: "index_formulario_turmas_on_turma_id_and_formulario_id", unique: true
+    t.index ["turma_id"], name: "index_formulario_turmas_on_turma_id"
   end
 
   create_table "formularios", force: :cascade do |t|
