@@ -1,0 +1,11 @@
+<nav class="sidebar">
+  <ul>
+    <% if current_user.admin? %>
+      <li><%= link_to "Templates"%></li>
+      <li><%= link_to "Resultados", respostas_path %></li>
+      <li><%= link_to "Gerenciamento" %></li>
+    <% else %>
+      <li><%= link_to "Avaliações"%></li>
+    <% end %>
+  </ul>
+</nav>

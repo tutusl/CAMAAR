@@ -1,0 +1,17 @@
+<%= render 'shared/sidebar' %>
+
+<div class="container">
+  <h2>Detalhes do Formulário</h2>
+
+  <% @estatisticas.each do |estatistica| %>
+    <div class="mb-4">
+      <h4><%= estatistica[:questao] %></h4>
+      <% estatistica[:respostas].each do |resposta, porcentagem| %>
+        <p>
+          <strong><%= resposta %>:</strong> <%= porcentagem %>%
+        </p>
+      <% end %>
+    </div>
+    <hr>
+  <% end %>
+</div>
