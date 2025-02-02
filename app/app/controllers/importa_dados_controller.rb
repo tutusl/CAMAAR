@@ -3,6 +3,9 @@ class ImportaDadosController < ApplicationController
 
   skip_before_action :require_login
 
+  def new
+  end
+
   def import
     json_dir = Rails.root.join("config", "json_files")
 
@@ -30,11 +33,9 @@ class ImportaDadosController < ApplicationController
   private
 
   def processa_dados(dados)
-    DepartamentosController.create(dados[:departamentos]) if dados[:departamentos]
-    CursosController.create(dados[:cursos]) if dados[:cursos]
-    UsuariosController.cadastra_usuarios(dados[:usuarios]) if dados[:usuarios]
-    DisciplinasController.create(dados[:disciplinas]) if dados[:disciplinas]
-    TurmasController.create(dados[:turmas]) if dados[:turmas]
-    ParticipantesController.cadastra_usuario_turmas(dados[:participantes]) if dados[:participantes]
+    # UsuariosController.cadastra_usuarios(dados[:usuarios]) if dados[:usuarios]
+    # DisciplinasController.create(dados[:disciplinas]) if dados[:disciplinas]
+    # TurmasController.create(dados[:turmas]) if dados[:turmas]
+    ParticipantesController.create(dados[:participantes]) if dados[:participantes]
   end
 end

@@ -10,7 +10,5 @@ class CreateTurmas < ActiveRecord::Migration[8.0]
 
       t.timestamps
     end
-
-    add_index :turmas, :codigoTurma, unique: true
   end
 end

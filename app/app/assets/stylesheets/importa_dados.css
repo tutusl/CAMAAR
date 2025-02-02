@@ -1,0 +1,46 @@
+/* Estilo do container principal */
+.email-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo do título */
+  .email-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo da descrição */
+  .email-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo do botão */
+  .email-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efeito hover no botão */
+  .email-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Efeito ativo no botão */
+  .email-button:active {
+    background-color: #004080;
+  }

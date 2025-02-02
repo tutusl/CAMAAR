@@ -78,17 +78,13 @@ class UsuariosController < ApplicationController
   end
 
   def self.cadastra_usuarios(usuarios_data)
-    usuarios_data.each do |usuario|
-      %w[dicente docente].each do |tipo|
-        usuario[tipo].each do |pessoa|
-          atributos_permitidos = [ :nome, :email, :matricula, :curso, :departamento, :papel, :formacao ] # Ajuste conforme a tabela
-          pessoa = pessoa.symbolize_keys
-          PendingUser.create(pessoa.slice(*atributos_permitidos))
-        end
-      end
+    # Extraindo o array de usuários corretamente
+    usuarios_array = usuarios_data["usuarios"] || usuarios_data[:usuarios] || []
+
+    usuarios_array.each do |usuario|
+      PendingUser.create(usuario)
     end
   end
-
 
   private
 

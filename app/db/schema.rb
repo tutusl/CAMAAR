@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_31_011119) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_01_234020) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -18,6 +18,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_31_011119) do
     t.string "nomeCurso", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "departamento_id", null: false
+    t.index ["departamento_id"], name: "index_cursos_on_departamento_id"
   end
 
   create_table "departamentos", force: :cascade do |t|
@@ -26,8 +28,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_31_011119) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "disciplinas", id: false, force: :cascade do |t|
-    t.string "codigoDisciplina", null: false
+  create_table "disciplinas", primary_key: "codigoDisciplina", id: :string, force: :cascade do |t|
     t.bigint "departamento_id", null: false
     t.string "nomeDisciplina", null: false
     t.datetime "created_at", null: false
@@ -106,7 +107,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_31_011119) do
     t.string "horario", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["codigoTurma"], name: "index_turmas_on_codigoTurma", unique: true
+  end
+
+  create_table "usuario_turmas", force: :cascade do |t|
+    t.bigint "turma_id", null: false
+    t.bigint "usuario_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["turma_id", "usuario_id"], name: "index_usuario_turmas_on_turma_id_and_usuario_id", unique: true
+    t.index ["turma_id"], name: "index_usuario_turmas_on_turma_id"
+    t.index ["usuario_id"], name: "index_usuario_turmas_on_usuario_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
@@ -126,6 +136,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_31_011119) do
     t.index ["matricula"], name: "index_usuarios_on_matricula", unique: true
   end
 
+  add_foreign_key "cursos", "departamentos"
   add_foreign_key "disciplinas", "departamentos"
   add_foreign_key "formulario_turmas", "formularios"
   add_foreign_key "formulario_turmas", "turmas"
@@ -135,6 +146,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_31_011119) do
   add_foreign_key "respostas", "questaos"
   add_foreign_key "respostas", "usuarios"
   add_foreign_key "turmas", "disciplinas", column: "codigoDisciplina", primary_key: "codigoDisciplina"
+  add_foreign_key "usuario_turmas", "turmas"
+  add_foreign_key "usuario_turmas", "usuarios"
   add_foreign_key "usuarios", "cursos"
   add_foreign_key "usuarios", "departamentos"
 end
