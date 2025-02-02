@@ -82,7 +82,11 @@ class UsuariosController < ApplicationController
     usuarios_array = usuarios_data["usuarios"] || usuarios_data[:usuarios] || []
 
     usuarios_array.each do |usuario|
-      PendingUser.create(usuario)
+      usuario_existe = Usuario.find_by(email: usuario["email"])
+      pending_user_existe = PendingUser.find_by(email: usuario["email"])
+      if usuario_existe.nil? && pending_user_existe.nil?
+        PendingUser.create(usuario)
+      end
     end
   end
 

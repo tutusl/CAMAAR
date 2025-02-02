@@ -11,9 +11,10 @@ class ParticipantesController < ApplicationController
           if usuario.nil?
             next
           end
-          puts usuario.id
-          puts turma.id
-          UsuarioTurma.create!(usuario_id: usuario.id, turma_id: turma.id)
+          participante_existe = UsuarioTurma.find_by(usuario_id: usuario.id, turma_id: turma.id)
+          if participante_existe.nil?
+            UsuarioTurma.create!(usuario_id: usuario.id, turma_id: turma.id)
+          end
         end
       end
     end

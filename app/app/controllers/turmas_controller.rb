@@ -3,11 +3,14 @@ class TurmasController < ApplicationController
     turmas_array = turmas_data["turmas"] || turmas_data[:turmas] || []
 
     turmas_array.each do |turma|
-      puts turma
-      Turma.create!(codigoDisciplina: turma["code"],
-                codigoTurma: turma["class"]["classCode"],
-                semestre: turma["class"]["semester"],
-                horario: turma["class"]["time"])
+      turma_existe = Turma.find_by(codigoDisciplina: turma["code"], codigoTurma: turma["class"]["classCode"], 
+                                    semestre: turma["class"]["semester"], horario: turma["class"]["time"])
+      if turma_existe.nil?
+        Turma.create!(codigoDisciplina: turma["code"],
+        codigoTurma: turma["class"]["classCode"],
+        semestre: turma["class"]["semester"],
+        horario: turma["class"]["time"])
+      end
     end
   end
 end

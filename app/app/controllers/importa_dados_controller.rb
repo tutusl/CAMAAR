@@ -1,8 +1,6 @@
 class ImportaDadosController < ApplicationController
   require "json"
 
-  skip_before_action :require_login
-
   def new
   end
 
@@ -33,9 +31,9 @@ class ImportaDadosController < ApplicationController
   private
 
   def processa_dados(dados)
-    # UsuariosController.cadastra_usuarios(dados[:usuarios]) if dados[:usuarios]
-    # DisciplinasController.create(dados[:disciplinas]) if dados[:disciplinas]
-    # TurmasController.create(dados[:turmas]) if dados[:turmas]
+    UsuariosController.cadastra_usuarios(dados[:usuarios]) if dados[:usuarios]
+    DisciplinasController.create(dados[:disciplinas]) if dados[:disciplinas]
+    TurmasController.create(dados[:turmas]) if dados[:turmas]
     ParticipantesController.create(dados[:participantes]) if dados[:participantes]
   end
 end
