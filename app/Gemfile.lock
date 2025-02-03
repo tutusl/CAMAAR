@@ -394,8 +394,8 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
-  pg
   letter_opener_web
+  pg
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.1)
