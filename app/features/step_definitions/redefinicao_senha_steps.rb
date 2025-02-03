@@ -1,5 +1,3 @@
-# features/step_definitions/redefinicao_senha_steps.rb
-
 Dado("que eu esteja na página de login") do
     visit new_user_session_path
   end

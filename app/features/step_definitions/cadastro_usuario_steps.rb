@@ -1,5 +1,3 @@
-# features/step_definitions/cadastro_usuario_steps.rb
-
 Dado("que eu estou na página de cadastro") do
     visit new_user_registration_path
   end

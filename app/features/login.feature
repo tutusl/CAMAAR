@@ -5,9 +5,9 @@ Feature: Login de usuário
 
   Scenario: Login bem-sucedido
     Given que eu estou na página de login
-    And existe um usuário cadastrado com email "usuario@exemplo.com" e senha "senha123"
-    When eu preencho o campo "Email" com "usuario@exemplo.com"
-    And eu preencho o campo "Senha" com "senha123"
+    And existe um usuário cadastrado com email "admin@admin.com" e senha "admin"
+    When eu preencho o campo "Email" com "admin@admin.com"
+    And eu preencho o campo "Senha" com "admin"
     And eu clico no botão "Entrar"
     Then eu devo ser redirecionado para a página inicial do meu papel de usuário(Aluno, Professor ou Administrador)
     And eu devo ver a mensagem "Login realizado com sucesso"

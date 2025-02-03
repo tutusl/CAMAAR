@@ -1,5 +1,3 @@
-# features/step_definitions/definicao_senha_steps.rb
-
 Dado("que eu receba um e-mail de solicitação de cadastro para criar uma senha") do
     @user = create(:user, password: nil)
     @user.send_confirmation_instructions

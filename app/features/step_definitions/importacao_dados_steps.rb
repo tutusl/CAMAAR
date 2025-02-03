@@ -1,5 +1,3 @@
-# features/step_definitions/importacao_dados_steps.rb
-
 Quando("ele acessar a página {string}") do |page_name|
     case page_name
     when "Importar dados SIGAA"

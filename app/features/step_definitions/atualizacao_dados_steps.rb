@@ -1,5 +1,3 @@
-# features/step_definitions/atualizacao_dados_steps.rb
-
 Dado("que o administrador está autenticado no sistema CAMAAR") do
     @admin = create(:user, role: 'admin')
     visit new_user_session_path

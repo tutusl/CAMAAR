@@ -1,29 +1,12 @@
-# spec/factories/users.rb
 FactoryBot.define do
-    factory :user do
-      nome { Faker::Name.name }
-      sequence(:email) { |n| "user#{n}@example.com" }
-      sequence(:matricula) { |n| "0000#{n.to_s.rjust(4, '0')}" }
-      papel { %w[discente docente administrador].sample }
-      formacao { %w[graduando mestrado doutorado].sample }
-      departamento { Faker::Educator.university }
-      curso { Faker::Educator.course_name }
-  
-      # Traits para papéis específicos
-      trait :discente do
-        papel { 'discente' }
-        formacao { 'graduando' }
-      end
-  
-      trait :docente do
-        papel { 'docente' }
-        formacao { 'doutorado' }
-      end
-  
-      trait :administrador do
-        papel { 'administrador' }
-        formacao { nil }
-        curso { nil }
-      end
-    end
+  factory :usuario, class: 'Usuario' do # Note a referência explícita à classe
+    nome { "Admin" }
+    sequence(:email) { |n| "user#{n}@example.com" }
+    password { "admin123" }
+    password_confirmation { "admin123" }
+    sequence(:matricula) { |n| "0000#{n.to_s.rjust(4, '0')}" }
+    papel { "administrador" }
+    formacao { "doutorado" }
+    departamento { create(:departamento) } # Ajuste se necessário
   end
+end

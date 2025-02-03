@@ -33,6 +33,7 @@ Capybara::Screenshot.autosave_on_failure = true
 
 # Configuração do DatabaseCleaner
 DatabaseCleaner.strategy = :transaction
+DatabaseCleaner.allow_remote_database_url = true if ENV['CI']
 
 # Hook para limpar o banco de dados antes de cada cenário
 Before do

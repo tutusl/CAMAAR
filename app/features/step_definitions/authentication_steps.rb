@@ -1,10 +1,8 @@
-# features/step_definitions/authentication_steps.rb
-
 # Login como administrador ou usuário comum
 Dado("que estou logado como {string}") do |user_type|
     case user_type.downcase
     when "administrador"
-      @user = create(:user, role: 'admin', email: 'admin@example.com', password: 'password')
+      @user = create(:user, role: 'admin', email: 'admin@admin.com', password: 'admin')
     when "participante de uma turma"
       @user = create(:user, role: 'participant', email: 'participante@example.com', password: 'password')
     else
