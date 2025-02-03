@@ -68,6 +68,14 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem 'webdrivers' # To manage browser drivers
+  gem 'database_cleaner-active_record'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'capybara-screenshot'
+  gem 'shoulda-matchers'
+  gem 'timecop'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development, :test do
