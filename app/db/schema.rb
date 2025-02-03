@@ -38,7 +38,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_01_234020) do
   end
 
   create_table "formulario_turmas", force: :cascade do |t|
-  create_table "formulario_turmas", force: :cascade do |t|
     t.bigint "turma_id", null: false
     t.bigint "formulario_id", null: false
     t.datetime "created_at", null: false
