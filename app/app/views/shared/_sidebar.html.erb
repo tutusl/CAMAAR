@@ -7,6 +7,9 @@
       <li><%= link_to "Emails enviados", 'http://127.0.0.1:3000/emails'%></li>
     <% else %>
       <li><%= link_to "Avaliações"%></li>
+      <% if current_usuario %>
+        <%= link_to "Editar meus dados", edit_usuario_path(current_usuario), class: "btn btn-primary" %>
+      <% end %>
     <% end %>
   </ul>
 </nav>

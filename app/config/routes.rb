@@ -2,7 +2,12 @@
 Rails.application.routes.draw do
   root to: "sessions#new"
   resources :importadados, only: [:new, :create]
-  resources :usuarios
+  resources :usuarios do
+    member do
+      get :edit
+      patch :update
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
   resources :respostas, only: [:index, :show]
   resources :formularios
