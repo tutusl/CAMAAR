@@ -1,0 +1,7 @@
+<%= render 'shared/sidebar' %>
+
+<div class="importar-container">
+  <h1 class="importar-title">Importar dados</h1>
+  <p class="importar-description">Clique no botão abaixo para importar os dados do SIGAA.</p>
+  <%= button_to 'Importar dados', importadados_path, method: :post, class: 'importar-button' %>  
+</div>

@@ -3,7 +3,7 @@
     <% if current_user.admin? %>
       <li><%= link_to "Templates"%></li>
       <li><%= link_to "Resultados", respostas_path %></li>
-      <li><%= link_to "Gerenciamento" %></li>
+      <li><%= link_to "Importar dados", new_importadado_path %></li>
     <% else %>
       <li><%= link_to "Avaliações"%></li>
     <% end %>

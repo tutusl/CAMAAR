@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def require_login
-    puts session[:user_id]
     redirect_to new_session_path unless session.include? :user_id
   end
 
