@@ -78,7 +78,7 @@ class UsuariosController < ApplicationController
   end
 
   def self.cadastra_usuarios(usuarios_data)
-    # Extraindo o array de usuários corretamente
+    # Extraindo o array de usuários corretamente0
     usuarios_array = usuarios_data["usuarios"] || usuarios_data[:usuarios] || []
 
     usuarios_array.each do |usuario|
