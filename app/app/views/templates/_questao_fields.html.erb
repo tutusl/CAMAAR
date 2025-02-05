@@ -1,0 +1,9 @@
+<div class="questao-fields">
+  <%= f.label :tipo, "Tipo da Questão", class: "form-label" %>
+  <%= f.select :tipo, ['Múltipla escolha', 'Dissertativa'], {}, class: "form-control" %>
+
+  <%= f.label :enunciado, "Enunciado", class: "form-label" %>
+  <%= f.text_area :enunciado, class: "form-control form-textarea" %>
+
+  <button type="button" class="btn btn-danger remove-questao" data-action="click->template-form#removeQuestion">Remover</button>
+</div>

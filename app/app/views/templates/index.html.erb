@@ -1,10 +1,19 @@
-<!-- app/views/templates/index.html.erb -->
-<h1>Gerenciamento de Templates</h1>
+<%= render 'shared/sidebar' %>
+<div class="container-templates">
+<h2>Gerenciamento de Templates</h2>
+<div class="templates-cards">
+<% if @templates.any? %>
+  <div class="templates-grid">
+    <% @templates.each do |template| %>
+      <%= render TemplateCardComponent.new(template: template) %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="alert alert-info text-center">
+    <p>Sem templates disponíveis.</p>
+  </div>
+<% end %>
 
-<div class="grid grid-cols-3 gap-4">
-  <% @templates.each do |template| %>
-    <%= render TemplateCardComponent.new(template: template) %>
-  <% end %>
+<%= link_to 'Novo Template', new_template_path, class: 'btn-primary' %>
 </div>
-
-<%= link_to 'Novo Template', new_template_path, class: 'btn btn-primary' %>
+</div>
