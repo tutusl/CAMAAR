@@ -4,163 +4,103 @@
   padding: 30px;
   max-width: calc(100% - 270px);
 }
-
-.templates-cards {
-  display: flex;
-  flex-direction: column;
-}
+/* Cabeçalho */
 h2 {
-  color: #2C3E50;
+  text-align: center;
   margin-bottom: 20px;
+  color: #333;
 }
 
-/* Grid responsivo para os templates */
+/* Grid de templates */
 .templates-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 20px;
+  justify-content: center;
 }
 
-/* Responsividade: 2 colunas em telas médias */
-@media (max-width: 1024px) {
-  .templates-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Responsividade: 1 coluna em telas pequenas */
-@media (max-width: 768px) {
-  .templates-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-.alert-info {
-  background-color: #D6EAF8;
-  color: #2C3E50;
+/* Estilos do card */
+.template-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Estilização do botão "Novo Template" */
-.btn-primary {
-  display: block;
-  width: max-content;
-  margin: 20px auto;
-  background-color: #3498db;
-  color: white;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
+.template-card:hover {
+  transform: scale(1.02);
+}
+
+/* Nome do template */
+.template-card h3 a {
   text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.template-card h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Data de criação */
+.text-gray-500 {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Ações */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #2980b9;
-}
-
-.btn-primary:active {
-  background-color: #1f618d;
-}
-
-/* Contêiner do Formulário */
-.form-container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilização dos Labels */
-.form-label {
-  font-weight: bold;
-  color: #2C3E50;
-  display: block;
-  margin-bottom: 5px;
-}
-/* Contêiner do Formulário */
-.form-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilização dos Labels */
-.form-label {
-  font-weight: bold;
-  color: #2C3E50;
-  display: block;
-  margin-bottom: 5px;
-}
-
-/* Campos de Entrada (Text e Date) */
-.form-control {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: border 0.3s ease-in-out;
-}
-
-.form-control:focus {
-  border-color: #3498db;
-  outline: none;
-  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-}
-
-/* Questões */
-.questions-container {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #ecf0f1;
-  border-radius: 6px;
-}
-
-.questions-container h3 {
-  color: #2C3E50;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* Botões */
-.btn-success, .btn-danger {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.btn-success {
-  background-color: #2ecc71;
-  color: white;
-  border: none;
-}
-
-.btn-success:hover {
-  background-color: #27ae60;
+  background-color: #0056b3;
 }
 
 .btn-danger {
-  background-color: #e74c3c;
+  background-color: #dc3545;
   color: white;
-  border: none;
+  height: 20px;
+  margin-top: 20px;
+  width: 200px;
 }
 
 .btn-danger:hover {
-  background-color: #c0392b;
+  background-color: #a71d2a;
+}
+
+/* Botão de Novo Template */
+.btn-primary {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  width: 200px;
+}
+
+/* Alerta quando não há templates */
+.alert {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
 }

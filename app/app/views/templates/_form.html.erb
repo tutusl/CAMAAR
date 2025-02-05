@@ -7,11 +7,6 @@
     <%= form.text_field :nomeTemplate, class: "form-control" %>
   </div>
 
-  <!-- Data de Criação -->
-  <div class="form-group">
-    <%= form.label :dataCriacao, "Data de Criação", class: "form-label" %>
-    <%= form.date_field :dataCriacao, class: "form-control" %>
-  </div>
 
   <!-- Semestre -->
   <div class="form-group">
@@ -23,7 +18,7 @@
   <div class="questions-container">
     <h3>Questões</h3>
     <div data-controller="template-form">
-      <%= form.fields_for :questoes do |q| %>
+      <%= form.fields_for :questaos do |q| %>
         <%= render 'templates/questao_fields', f: q %>
       <% end %>
       <button type="button" class="btn btn-success add-questao" data-action="click->template-form#addQuestion">Adicionar Questão</button>

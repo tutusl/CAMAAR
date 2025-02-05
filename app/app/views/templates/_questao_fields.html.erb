@@ -1,6 +1,5 @@
-<div class="questao-fields">
-  <%= f.label :tipo, "Tipo da Questão", class: "form-label" %>
-  <%= f.select :tipo, ['Múltipla escolha', 'Dissertativa'], {}, class: "form-control" %>
+  <div class="questao-fields">
+  <%= f.hidden_field :tipoQuestao, value: "Dissertativa" %>
 
   <%= f.label :enunciado, "Enunciado", class: "form-label" %>
   <%= f.text_area :enunciado, class: "form-control form-textarea" %>
