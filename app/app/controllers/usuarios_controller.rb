@@ -1,5 +1,6 @@
+# controllers/usuarios_controller.rb
 class UsuariosController < ApplicationController
-  skip_before_action :require_login, only: [ :new, :create ]
+  skip_before_action :require_login, only: [ :new, :create, :alterar_senha_form ]
 
   def index
     @usuarios = Usuario.all
@@ -78,7 +79,7 @@ class UsuariosController < ApplicationController
   end
 
   def self.cadastra_usuarios(usuarios_data)
-    # Extraindo o array de usuários corretamente
+    # Extraindo o array de usuários corretamente0
     usuarios_array = usuarios_data["usuarios"] || usuarios_data[:usuarios] || []
 
     usuarios_array.each do |usuario|
@@ -89,6 +90,17 @@ class UsuariosController < ApplicationController
       end
     end
   end
+
+  def alterar_senha
+    @usuario = Usuario.find(params[:id])
+    UserMailer.email_alterar_senha(@usuario).deliver_later
+    redirect_to edit_usuario_path(@usuario), notice: "Um e-mail foi enviado para redefinir sua senha."
+  end
+  
+  def alterar_senha_form
+      render :alterar_senha
+  end
+  
 
   private
 

@@ -1,10 +1,10 @@
-class ImportaDadosController < ApplicationController
+class ImportadadosController < ApplicationController
   require "json"
 
   def new
   end
 
-  def import
+  def create
     json_dir = Rails.root.join("config", "json_files")
 
     # Verifica se o diretório existe

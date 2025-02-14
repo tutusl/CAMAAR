@@ -43,7 +43,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_01_234020) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["formulario_id"], name: "index_formulario_turmas_on_formulario_id"
+    t.index ["formulario_id"], name: "index_formulario_turmas_on_formulario_id"
     t.index ["turma_id", "formulario_id"], name: "index_formulario_turmas_on_turma_id_and_formulario_id", unique: true
+    t.index ["turma_id"], name: "index_formulario_turmas_on_turma_id"
     t.index ["turma_id"], name: "index_formulario_turmas_on_turma_id"
   end
 

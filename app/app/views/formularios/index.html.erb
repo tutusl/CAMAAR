@@ -1,0 +1,25 @@
+<%= render 'shared/sidebar' %>
+<div class="container-formularios">
+  <h2>Resultados das Avaliações</h2>
+
+  <% if @formularios.any? %>
+    <div class="row">
+      <% @formularios.each do |formulario| %>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title"><%= formulario.codigo_disciplina.nomeDisciplina %> - <%= formulario.codigoFormulario %></h5>
+              <p class="card-text">Semestre: <%= formulario.semestre %></p>
+              <p class="card-text">Professor: <%= formulario.usuario_formularios.find_by(papel: 'professor').usuario.nome %></p>
+              <%= link_to "Ver Detalhes", resposta_path(formulario.formularios.first), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="alert alert-info text-center">
+      <p>Sem formulários disponíveis</p>
+    </div>
+  <% end %>
+</div>

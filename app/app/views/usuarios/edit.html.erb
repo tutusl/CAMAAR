@@ -1,0 +1,42 @@
+<%= render 'shared/sidebar' %>
+
+<div class="container-form">
+  <h2 class="form-title">Editar Dados</h2>
+
+  <%= form_with(model: @usuario, local: true) do |f| %>
+    <% if @usuario.errors.any? %>
+      <div class="error-message">
+        <ul>
+          <% @usuario.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :nome %>
+      <%= f.text_field :nome %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password, "Senha"%>
+      <%= f.password_field :password %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation, "Confirmar senha" %>
+      <%= f.password_field :password_confirmation%>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Atualizar dados", class: "btn" %>
+    </div>
+  <% end %>
+<%= button_to 'Alterar senha', alterar_senha_usuario_path(@usuario), method: :post, class: 'importar-button' %>
+</div>
