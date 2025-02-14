@@ -1,10 +1,8 @@
-# spec/factories/turmas.rb
 FactoryBot.define do
-    factory :turma do
-      code { "CIC#{Faker::Number.unique.number(digits: 4)}" }
-      name { Faker::Educator.course }
-      class_code { "TA" }
-      semester { "2021.2" }
-      time { "35T45" }
-    end
+  factory :turma do
+    sequence(:codigoTurma) { |n| "TURMA#{n}" }
+    semestre { "2023.1" }
+    horario { "08:00-10:00" }
+    association :disciplina, factory: :disciplina
   end
+end

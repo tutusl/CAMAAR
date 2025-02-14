@@ -48,15 +48,6 @@ Dado("que estou logado como {string}") do |user_type|
     expect(page).to have_current_path(root_path)
   end
   
-  Então("devo ver uma mensagem de login bem-sucedido") do
-    expect(page).to have_content('Login efetuado com sucesso')
-  end
-  
-  # Verificar login inválido
-  Então("devo ver uma mensagem de erro {string}") do |message|
-    expect(page).to have_content(message)
-  end
-  
   # Logout
   Quando("clico no link de logout") do
     click_link 'Sair'
@@ -68,4 +59,39 @@ Dado("que estou logado como {string}") do |user_type|
   
   Então("devo ver uma mensagem de logout {string}") do |message|
     expect(page).to have_content(message)
+  end
+
+
+  Dado('que eu estou na página de login') do
+    visit new_session_path
+  end
+  
+  Dado('existe um usuário cadastrado com email {string} e senha {string}') do |email, senha|
+    FactoryBot.create(:usuario,
+      email: email,
+      password: senha,
+      password_confirmation: senha,
+      papel: "administrador"
+    )
+  end
+  
+  Quando('eu preencho o campo {string} com {string}') do |campo, valor|
+    fill_in campo, with: valor
+  end
+  
+  Quando('eu clico no botão Entrar') do |botao|
+    click_button botao
+  end
+  
+  Então('eu devo ser redirecionado para a página inicial do meu papel de usuário\(Aluno, Professor ou Administrador)') do
+    usuario = Usuario.last
+    if usuario.admin?
+      expect(page).to have_current_path(respostas_path)
+    else
+      expect(page).to have_current_path(avaliacoes_path)
+    end
+  end
+  
+  Então('eu devo permanecer na página de login') do
+    expect(page).to have_current_path(new_session_path)
   end

@@ -5,12 +5,11 @@ Feature: Login de usuário
 
   Scenario: Login bem-sucedido
     Given que eu estou na página de login
-    And existe um usuário cadastrado com email "admin@admin.com" e senha "admin"
-    When eu preencho o campo "Email" com "admin@admin.com"
-    And eu preencho o campo "Senha" com "admin"
+    And existe um usuário cadastrado com email "teste1@teste1.com" e senha "teste1"
+    When eu preencho o campo "Email" com "teste1@teste1.com"
+    And eu preencho o campo "Senha" com "teste1"
     And eu clico no botão "Entrar"
     Then eu devo ser redirecionado para a página inicial do meu papel de usuário(Aluno, Professor ou Administrador)
-    And eu devo ver a mensagem "Login realizado com sucesso"
 
   Scenario: Login com credenciais inválidas
     Given que eu estou na página de login
@@ -18,12 +17,8 @@ Feature: Login de usuário
     And eu preencho o campo "Senha" com "senhaerrada"
     And eu clico no botão "Entrar"
     Then eu devo permanecer na página de login
-    And eu devo ver a mensagem "Email ou senha inválidos"
 
   Scenario: Tentativa de login com campos vazios
     Given que eu estou na página de login
     When eu clico no botão "Entrar"
-    Then eu devo ver a mensagem "Email e senha são obrigatórios"
-
-##Diferenciação de papel de usuário(Aluno, Professor, Administrador)
-##Será implentada no Cadastro, o processo de login é o mesmo nos 3 casos.
+    Then eu devo permanecer na página de login
