@@ -23,5 +23,8 @@ module App
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.after_initialize do
+      Rails.application.load_seed if Rails.env.development?
+    end 
   end
 end

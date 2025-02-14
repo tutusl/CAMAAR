@@ -1,8 +1,7 @@
+# app/models/questao.rb
 class Questao < ApplicationRecord
-    belongs_to :template
-    has_many :respostas
-    
-    validates :idQuestao, presence: true, uniqueness: true
-    validates :enunciado, presence: true
-    validates :tipoQuestao, presence: true
-  end
+  belongs_to :template
+
+  validates :tipo, presence: true
+  validates :enunciado, presence: true
+end

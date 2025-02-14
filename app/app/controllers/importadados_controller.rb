@@ -1,9 +1,10 @@
-class ImportaDadosController < ApplicationController
+class ImportadadosController < ApplicationController
   require "json"
 
-  skip_before_action :require_login
+  def new
+  end
 
-  def import
+  def create
     json_dir = Rails.root.join("config", "json_files")
 
     # Verifica se o diretório existe
@@ -30,11 +31,9 @@ class ImportaDadosController < ApplicationController
   private
 
   def processa_dados(dados)
-    DepartamentosController.create(dados[:departamentos]) if dados[:departamentos]
-    CursosController.create(dados[:cursos]) if dados[:cursos]
     UsuariosController.cadastra_usuarios(dados[:usuarios]) if dados[:usuarios]
     DisciplinasController.create(dados[:disciplinas]) if dados[:disciplinas]
     TurmasController.create(dados[:turmas]) if dados[:turmas]
-    ParticipantesController.cadastra_usuario_turmas(dados[:participantes]) if dados[:participantes]
+    ParticipantesController.create(dados[:participantes]) if dados[:participantes]
   end
 end

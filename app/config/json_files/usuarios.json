@@ -3,162 +3,182 @@
       {
         "nome": "Ana Clara Jordão Perna",
         "email": "ana.perna@email.com",
+        "matricula": "00000000",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
       },
       {
         "nome": "André Carvalho Marques",
         "email": "andre.marques@email.com",
+        "matricula": "00000001",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Engenharia Elétrica",
-        "nomeCurso": "ENGENHARIA ELÉTRICA/ENE"
+        "departamento": "Departamento de Engenharia Elétrica",
+        "curso": "ENGENHARIA ELÉTRICA/ENE"
       },
       {
         "nome": "Arthur Barreiros de Oliveira Mota",
         "email": "arthur.mota@email.com",
+        "matricula": "00000002",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Engenharia Mecânica",
-        "nomeCurso": "ENGENHARIA MECATRÔNICA/FT"
+        "departamento": "Departamento de Engenharia Mecânica",
+        "curso": "ENGENHARIA MECATRÔNICA/FT"
       },
       {
         "nome": "Bianca Glycia Boueri",
         "email": "bianca.boueri@email.com",
+        "matricula": "00000003",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Administração",
-        "nomeCurso": "ADMINISTRAÇÃO/FACE"
+        "departamento": "Departamento de Administração",
+        "curso": "ADMINISTRAÇÃO/FACE"
       },
       {
         "nome": "Caio Otávio Peluti Alencar",
         "email": "caio.alencar@email.com",
+        "matricula": "00000004",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
       },
       {
         "nome": "Camila Frealdo Fraga",
         "email": "camila.fraga@email.com",
+        "matricula": "00000005",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Economia",
-        "nomeCurso": "ECONOMIA/FACE"
+        "departamento": "Departamento de Economia",
+        "curso": "ECONOMIA/FACE"
       },
       {
         "nome": "Davi de Moura Amaral",
         "email": "davi.amaral@email.com",
+        "matricula": "00000006",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Matemática",
-        "nomeCurso": "MATEMÁTICA/EST"
+        "departamento": "Departamento de Matemática",
+        "curso": "MATEMÁTICA/EST"
       },
       {
         "nome": "Eduardo Xavier Dantas",
         "email": "eduardo.dantas@email.com",
+        "matricula": "00000007",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Engenharia Civil e Ambiental",
-        "nomeCurso": "ENGENHARIA CIVIL/ENC"
+        "departamento": "Departamento de Engenharia Civil e Ambiental",
+        "curso": "ENGENHARIA CIVIL/ENC"
       },
       {
         "nome": "Enzo Yoshio Niho",
         "email": "enzo.niho@email.com",
+        "matricula": "00000008",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Faculdade de Direito",
-        "nomeCurso": "DIREITO/FD"
+        "departamento": "Faculdade de Direito",
+        "curso": "DIREITO/FD"
       },
       {
         "nome": "Gabriel Faustino Lima da Rocha",
         "email": "gabriel.rocha@email.com",
+        "matricula": "00000009",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Faculdade de Medicina",
-        "nomeCurso": "MEDICINA/FM"
+        "departamento": "Faculdade de Medicina",
+        "curso": "MEDICINA/FM"
       },
       {
         "nome": "Gabriel Ligoski",
         "email": "gabriel.ligoski@email.com",
+        "matricula": "00000010",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
       },
       {
         "nome": "Gustavo Rodrigues dos Santos",
         "email": "gustavo.santos@email.com",
+        "matricula": "00000011",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
       },
       {
         "nome": "Jefte Augusto Gomes Batista",
         "email": "jefte.batista@email.com",
+        "matricula": "00000012",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
       },
       {
         "nome": "Maria Eduarda Carvalho Santos",
         "email": "maria.santos@email.com",
+        "matricula": "00000013",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC"
       },
       {
         "nome": "Pedro Cesar Ribeiro Passos",
         "email": "pedro.passos@email.com",
+        "matricula": "00000014",
         "papel": "discente",
         "formacao": "graduando",
-        "nomeDepartamento": "Departamento de Engenharia Mecânica",
-        "nomeCurso": "ENGENHARIA MECATRÔNICA/FT"
+        "departamento": "Departamento de Engenharia Mecânica",
+        "curso": "ENGENHARIA MECATRÔNICA/FT"
       },
       {
         "nome": "Prof. Maristela Terto de Holanda",
         "email": "mholanda@unb.br",
+        "matricula": "00000015",
         "papel": "docente",
         "formacao": "doutorado",
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": null
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": null
       },
       {
         "nome": "Prof. João Carlos Mendes",
         "email": "joao.mendes@unb.br",
+        "matricula": "00000016",
         "papel": "docente",
         "formacao": "doutorado",
-        "nomeDepartamento": "Departamento de Engenharia Elétrica",
-        "nomeCurso": null
+        "departamento": "Departamento de Engenharia Elétrica",
+        "curso": null
       },
       {
         "nome": "Prof. Lúcia Helena Freitas",
         "email": "lucia.freitas@unb.br",
+        "matricula": "00000017",
         "papel": "docente",
         "formacao": "doutorado",
-        "nomeDepartamento": "Faculdade de Direito",
-        "nomeCurso": null
+        "departamento": "Faculdade de Direito",
+        "curso": null
       },
       {
         "nome": "Administrador Carlos Henrique",
         "email": "carlos.henrique@unb.br",
+        "matricula": "00000018",
         "papel": "administrador",
         "formacao": null,
-        "nomeDepartamento": "Departamento de Ciências da Computação",
-        "nomeCurso": null
+        "departamento": "Departamento de Ciências da Computação",
+        "curso": null
       },
       {
         "nome": "Administrador Fernanda Lima",
         "email": "fernanda.lima@unb.br",
+        "matricula": "00000019",
         "papel": "administrador",
         "formacao": null,
-        "nomeDepartamento": "Faculdade de Medicina",
-        "nomeCurso": null
+        "departamento": "Faculdade de Medicina",
+        "curso": null
       }
     ]
   }

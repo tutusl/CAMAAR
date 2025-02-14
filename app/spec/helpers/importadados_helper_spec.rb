@@ -10,6 +10,6 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe ImportaDadosHelper, type: :helper do
+RSpec.describe ImportadadosHelper, type: :helper do
   pending "add some examples to (or delete) #{__FILE__}"
 end

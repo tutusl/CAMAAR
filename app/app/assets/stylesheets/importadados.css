@@ -1,0 +1,43 @@
+/* Estilo do container principal */
+
+.importar-container {
+  margin-left: 270px; /* Ajuste para a sidebar */
+  padding: 30px;
+  max-width: calc(100% - 270px);
+  }
+  
+  /* Estilo do título */
+  .importar-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo da descrição */
+  .importar-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo do botão */
+  .importar-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efeito hover no botão */
+  .importar-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Efeito ativo no botão */
+  .importar-button:active {
+    background-color: #004080;
+  }

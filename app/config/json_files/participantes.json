@@ -1,4 +1,5 @@
-[
+{    
+    "participantes": [
     {
         "code": "CIC0097",
         "classCode": "TA",
@@ -331,11 +332,11 @@
             {
                 "nome": "Pedro Cesar Ribeiro Passos",
                 "curso": "ENGENHARIA MECATRÔNICA - CONTROLE E AUTOMAÇÃO/FTD",
-                "matricula": "180139312",
+                "matricula": "00000014",
                 "formacao": "graduando",
                 "papel": "dicente",
                 "departamento": "Departamento de Ciências da Computação",
-                "email": "pedrocesarribeiro2013@gmail.com"
+                "email": "pedro.passos@email.com"
             },
             {
                 "nome": "Rafael Mascarenhas Dal Moro",
@@ -386,7 +387,7 @@
         "docente": [
             {
             "nome": "MARISTELA TERTO DE HOLANDA",
-            "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC",
+            "curso": null,
             "matricula": "200028545",
             "departamento": "Departamento de Ciências da Computação",
             "formacao": "DOUTORADO",
@@ -395,4 +396,5 @@
             }
         ]
     }
-]
+    ]
+}

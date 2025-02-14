@@ -1,5 +1,6 @@
+# controllers/usuarios_controller.rb
 class UsuariosController < ApplicationController
-  skip_before_action :require_login, only: [ :new, :create ]
+  skip_before_action :require_login, only: [ :new, :create, :alterar_senha_form ]
 
   def index
     @usuarios = Usuario.all
@@ -78,17 +79,28 @@ class UsuariosController < ApplicationController
   end
 
   def self.cadastra_usuarios(usuarios_data)
-    usuarios_data.each do |usuario|
-      %w[dicente docente].each do |tipo|
-        usuario[tipo].each do |pessoa|
-          atributos_permitidos = [ :nome, :email, :matricula, :curso, :departamento, :papel, :formacao ] # Ajuste conforme a tabela
-          pessoa = pessoa.symbolize_keys
-          PendingUser.create(pessoa.slice(*atributos_permitidos))
-        end
+    # Extraindo o array de usuários corretamente0
+    usuarios_array = usuarios_data["usuarios"] || usuarios_data[:usuarios] || []
+
+    usuarios_array.each do |usuario|
+      usuario_existe = Usuario.find_by(email: usuario["email"])
+      pending_user_existe = PendingUser.find_by(email: usuario["email"])
+      if usuario_existe.nil? && pending_user_existe.nil?
+        PendingUser.create(usuario)
       end
     end
   end
 
+  def alterar_senha
+    @usuario = Usuario.find(params[:id])
+    UserMailer.email_alterar_senha(@usuario).deliver_later
+    redirect_to edit_usuario_path(@usuario), notice: "Um e-mail foi enviado para redefinir sua senha."
+  end
+  
+  def alterar_senha_form
+      render :alterar_senha
+  end
+  
 
   private
 

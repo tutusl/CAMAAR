@@ -1,4 +1,5 @@
-[
+{    
+    "turmas": [
     {
         "code": "CIC0097",
         "name": "BANCOS DE DADOS",
@@ -26,4 +27,5 @@
             "time": "35M34"
         }
     }
-]
+    ]
+}

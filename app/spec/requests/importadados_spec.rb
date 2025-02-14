@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "ImportaDados", type: :request do
+RSpec.describe "Importadados", type: :request do
   describe "GET /import" do
     it "returns http success" do
-      get "/importa_dados/import"
+      get "/importadados/import"
       expect(response).to have_http_status(:success)
     end
   end
