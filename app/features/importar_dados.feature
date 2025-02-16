@@ -7,8 +7,8 @@ Feature: Importar dados do SIGAA para o sistema CAMAAR
   Scenario: Acessar a funcionalidade de importação
     Given que o administrador está autenticado no sistema CAMAAR
     When ele acessar a página "Importar dados SIGAA"
-    And clicar no botão "Iniciar importação"
-    Then ele deve ver a opção de "Importar dados do SIGAA"
+    And clicar no botão "Importar dados"
+    Then ele deve ver a opção de "dados importados com sucesso"
 
   Scenario: Iniciar a importação de dados
     Given que o administrador está na página "Importar dados SIGAA"

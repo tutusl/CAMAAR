@@ -1,9 +1,11 @@
 Dado("que o administrador está autenticado no sistema CAMAAR") do
-    @admin = create(:user, role: 'admin')
-    visit new_user_session_path
+    @admin = create(:usuario, :administrador)
+    visit new_session_path
     fill_in 'Email', with: @admin.email
-    fill_in 'Senha', with: 'password'
+    fill_in 'Senha', with: @admin.password
     click_button 'Entrar'
+
+    expect(page).to have_current_path(respostas_path)
   end
   
   Dado("está na página {string}") do |page_name|
