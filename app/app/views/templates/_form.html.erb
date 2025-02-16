@@ -1,0 +1,33 @@
+<%= render 'shared/sidebar' %>
+<%= form_with(model: template, local: true, class: "form-container") do |form| %>
+
+  <!-- Nome do Template -->
+  <div class="form-group">
+    <%= form.label :nomeTemplate, "Nome do Template", class: "form-label" %>
+    <%= form.text_field :nomeTemplate, class: "form-control" %>
+  </div>
+
+
+  <!-- Semestre -->
+  <div class="form-group">
+    <%= form.label :semestre, "Semestre", class: "form-label" %>
+    <%= form.text_field :semestre, class: "form-control" %>
+  </div>
+
+  <!-- Questões -->
+  <div class="questions-container">
+    <h3>Questões</h3>
+    <div data-controller="template-form">
+      <%= form.fields_for :questaos do |q| %>
+        <%= render 'templates/questao_fields', f: q %>
+      <% end %>
+      <button type="button" class="btn btn-success add-questao" data-action="click->template-form#addQuestion">Adicionar Questão</button>
+    </div>
+  </div>
+
+  <!-- Botão de Salvar -->
+  <div class="form-actions">
+    <%= form.submit 'Salvar', class: 'btn btn-primary' %>
+  </div>
+
+<% end %>

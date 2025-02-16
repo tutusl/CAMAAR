@@ -1,10 +1,35 @@
-<!-- app/views/templates/index.html.erb -->
-<h1>Gerenciamento de Templates</h1>
+<%= render 'shared/sidebar' %>
 
-<div class="grid grid-cols-3 gap-4">
-  <% @templates.each do |template| %>
-    <%= render TemplateCardComponent.new(template: template) %>
-  <% end %>
+<div class="container-templates">
+  <h2>Gerenciamento de Templates</h2>
+
+  <div class="templates-cards">
+    <% if @templates.any? %>
+      <div class="templates-grid">
+        <% @templates.each do |template| %>
+          <div class="template-card">
+            <!-- Nome do Template como link para edição -->
+            <h3><%= link_to template.nomeTemplate, edit_template_path(template) %></h3>
+
+            <!-- Data de Criação -->
+            <div class="text-gray-500">
+              Criado em: <%= template.dataCriacao.strftime('%d/%m/%Y') %>
+            </div>
+
+            <!-- Ações: Editar e Excluir -->
+            <div class="flex">
+              <%= link_to 'Editar', edit_template_path(template), class: 'btn btn-primary mr-2' %>
+              <%= link_to 'Excluir', template_path(template), method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-danger' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="alert alert-info text-center">
+        <p>Sem templates disponíveis.</p>
+      </div>
+    <% end %>
+
+    <%= link_to 'Novo Template', new_template_path, class: 'btn btn-primary' %>
+  </div>
 </div>
-
-<%= link_to 'Novo Template', new_template_path, class: 'btn btn-primary' %>

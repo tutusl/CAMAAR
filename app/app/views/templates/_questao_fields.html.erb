@@ -1,0 +1,8 @@
+  <div class="questao-fields">
+  <%= f.hidden_field :tipoQuestao, value: "Dissertativa" %>
+
+  <%= f.label :enunciado, "Enunciado", class: "form-label" %>
+  <%= f.text_area :enunciado, class: "form-control form-textarea" %>
+
+  <button type="button" class="btn btn-danger remove-questao" data-action="click->template-form#removeQuestion">Remover</button>
+</div>
