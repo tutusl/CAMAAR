@@ -1,0 +1,19 @@
+
+<div class="body-alterar-senha-container">
+  <div class="container">
+    <%= form_with  method: :post, html: {class: "form-login"} do |f|%>
+      <h1 class="form-login-header">Redefinir Senha</h1>
+      <div class="form-login-group">
+        <%= f.label :password, "Nova Senha" %>
+        <%= f.password_field :password, class: "form-login-control", required: true %>
+      </div>
+
+      <div class="form-login-group">
+        <%= f.label :password_confirmation, "Confirmar Senha" %>
+        <%= f.password_field :password_confirmation, class: "form-login-control", required: true %>
+      </div>
+
+      <%= f.submit "Alterar Senha", class: "form-login-btn" %>
+    <% end %>
+  </div>
+</div>
