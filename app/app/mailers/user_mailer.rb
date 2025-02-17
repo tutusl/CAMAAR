@@ -10,8 +10,9 @@ class UserMailer < ApplicationMailer
   end
 
   def email_alterar_senha(usuario)
-    @usuario_alterar = usuario
-    @url = 'http://127.0.0.1:3000/usuarios/alterar_senha'
-    mail(to: @usuario_alterar.email, subject: 'Altere sua senha no sistema CAMAAR')
+    @usuario = usuario
+    @url = edit_password_reset_url(token: @usuario.password_reset_token)
+    mail(to: @usuario.email, subject: 'Redefinição de Senha')
   end
+  
 end

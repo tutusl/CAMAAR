@@ -1,7 +1,6 @@
-
 <div class="body-alterar-senha-container">
   <div class="container">
-    <%= form_with model: @usuario, url: password_reset_path(@usuario.password_reset_token), method: :post, html: {class: "form-login"} do |f|%>
+    <%= form_with model: @usuario, url: edit_password_reset_path(params[:token]), method: :patch, html: {class: "form-login"} do |f|%>
       <h1 class="form-login-header">Redefinir Senha</h1>
       <div class="form-login-group">
         <%= f.label :password, "Nova Senha" %>
