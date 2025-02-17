@@ -10,6 +10,21 @@ class RespostasController < ApplicationController
                    .distinct
   end
 
+  class RespostasController < ApplicationController
+    def create
+      @formulario = Formulario.find(params[:formulario_id])
+      params[:respostas].each do |questao_id, resposta_texto|
+        Resposta.create(
+          formulario_id: @formulario.id,
+          questao_id: questao_id,
+          resposta: resposta_texto,
+          usuario_id: current_usuario.id
+        )
+      end
+      redirect_to formulario_path(@formulario), notice: 'Respostas enviadas com sucesso!'
+    end
+  end
+
   def show
     @formulario = Formulario.find(params[:id])
     @questoes = @formulario.template.questoes
