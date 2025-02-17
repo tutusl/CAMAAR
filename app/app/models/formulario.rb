@@ -5,8 +5,8 @@ class Formulario < ApplicationRecord
   has_many :formulario_turmas
   has_many :turmas, through: :formulario_turmas
   has_many :respostas
+  has_many :questaos, through: :template
 
-  validates :idFormulario, presence: true, uniqueness: true
   validates :dataCriacao, presence: true
   validates :tipoDestinatario, presence: true
 end
