@@ -22,14 +22,33 @@ class TemplatesController < ApplicationController
       @template.questaos = @template.questaos.map { |q| Questao.new(q) }
     end
 
-    # @template.questaos.each { |q| q.tipo = "Dissertativa" } if @template.questaos.any?
-
     if @template.save
       redirect_to templates_path, notice: 'Template criado com sucesso!'
     else
       puts "Erros ao salvar: #{@template.errors.full_messages}"
       redirect_to new_template_path, alert: @template.errors.full_messages.join(', ')
     end
+  end
+
+  def edit
+    @template = Template.find(params[:id])
+  end
+
+  def update
+    @template = Template.find(params[:id])
+
+    if @template.update(template_params)
+      redirect_to templates_path, notice: 'Template atualizado com sucesso!'
+    else
+      puts "Erros ao atualizar: #{@template.errors.full_messages}"
+      render :edit
+    end
+  end
+
+  def destroy
+    @template = Template.find(params[:id])
+    @template.destroy
+    redirect_to templates_path, notice: 'Template excluído com sucesso!'
   end
 
   private
