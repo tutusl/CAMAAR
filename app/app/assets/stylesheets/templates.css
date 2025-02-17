@@ -79,9 +79,14 @@ h2 {
 .btn-danger {
   background-color: #dc3545;
   color: white;
-  height: 20px;
   margin-top: 20px;
   width: 200px;
+}
+
+.btn-delete {
+  margin: 20px auto;
+  width: 200px;
+  text-align: center;
 }
 
 .btn-danger:hover {
@@ -96,6 +101,10 @@ h2 {
   width: 200px;
 }
 
+.btn-editar {
+  margin-right: 10px;
+}
+
 /* Alerta quando não há templates */
 .alert {
   background: #f8d7da;
@@ -103,4 +112,27 @@ h2 {
   padding: 15px;
   border-radius: 5px;
   margin-top: 20px;
+}
+
+.questions-title {
+  text-align: start;
+}
+
+.questao-fields {
+  display: flex;
+  gap: 35px;
+  padding-bottom: 30px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.select-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

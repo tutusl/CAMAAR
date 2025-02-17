@@ -3,6 +3,8 @@
 <div class="container-templates">
   <h2>Gerenciamento de Templates</h2>
 
+  <%= link_to 'Novo Template', new_template_path, class: 'btn btn-primary' %>
+
   <div class="templates-cards">
     <% if @templates.any? %>
       <div class="templates-grid">
@@ -18,8 +20,8 @@
 
             <!-- Ações: Editar e Excluir -->
             <div class="flex">
-              <%= link_to 'Editar', edit_template_path(template), class: 'btn btn-primary mr-2' %>
-              <%= link_to 'Excluir', template_path(template), method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-danger' %>
+              <%= link_to 'Editar', edit_template_path(template), class: 'btn btn-primary btn-editar' %>
+              <%= link_to 'Excluir', template_path(template), method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-danger btn-delete' %>
             </div>
           </div>
         <% end %>
@@ -30,6 +32,6 @@
       </div>
     <% end %>
 
-    <%= link_to 'Novo Template', new_template_path, class: 'btn btn-primary' %>
+    
   </div>
 </div>
