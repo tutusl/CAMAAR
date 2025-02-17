@@ -47,6 +47,7 @@ class TemplatesController < ApplicationController
 
   def destroy
     @template = Template.find(params[:id])
+    @template.questaos.destroy_all # Exclui todas as questões associadas
     @template.destroy
     redirect_to templates_path, notice: 'Template excluído com sucesso!'
   end
