@@ -1,5 +1,5 @@
 <div class="questao-fields">
-  <%= f.text_field :enunciado %>
-  <%= f.select :tipoQuestao, options_for_select(["Dissertativa", "Múltipla Escolha"]) %>
+  <%= f.text_field :enunciado, class: "form-control"%>
+  <%= f.select :tipoQuestao, options_for_select(["Dissertativa", "Múltipla Escolha"]), {}, class: "select-control" %>
   <button type="button" class="btn btn-danger" data-action="click->template-form#removeQuestion">Remover Questão</button>
 </div>
