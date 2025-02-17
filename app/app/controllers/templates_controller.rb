@@ -26,7 +26,7 @@ class TemplatesController < ApplicationController
       redirect_to templates_path, notice: 'Template criado com sucesso!'
     else
       puts "Erros ao salvar: #{@template.errors.full_messages}"
-      render :new
+      redirect_to new_template_path, alert: @template.errors.full_messages.join(', ')
     end
   end
   

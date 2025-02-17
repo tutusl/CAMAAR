@@ -2,3 +2,9 @@
 <h1>Novo Template</h1>
 
 <%= render 'form', template: @template %>
+
+<% if alert %>
+  <div class="alert alert-danger">
+    <%= alert %>
+  </div>
+<% end %>
