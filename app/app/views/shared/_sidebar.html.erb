@@ -5,11 +5,12 @@
     <% end %>
     <% if current_user.admin? %>
       <li><%= link_to "Templates", templates_path%></li>
+      <li><%= link_to "Formulários", formularios_path %></li>
       <li><%= link_to "Resultados", respostas_path %></li>
       <li><%= link_to "Importar dados", new_importadado_path %></li>
       <li><%= link_to "Emails enviados", 'http://127.0.0.1:3000/emails'%></li>
     <% else %>
-      <li><%= link_to "Avaliações"%></li>
+      <li><%= link_to "Formulários"%></li>
     <% end %>
   </ul>
 </nav>
