@@ -34,6 +34,25 @@ departamento_admin = Departamento.find_or_create_by!(nomeDepartamento: 'Administ
     puts 'Administrador padrão já existe.'
   end
 
+  unless Usuario.exists?(email: 'teste@gmail.com')
+    Usuario.create!(
+      email: 'teste@gmail.com',
+      password: 'aaa',
+      password_confirmation: 'aaa',
+      papel: 'estudante',
+      nome: 'Arthur',
+      matricula: '180030353',
+      formacao: 'CIC',
+      departamento_id: departamento_admin.id
+    )
+
+    puts 'Usuário padrão criado com sucesso!'
+    puts 'Email: teste@gmail.com'
+    puts 'Senha: aaa'
+  else
+    puts 'Usuário padrão já existe.'
+  end
+
 [ "Departamento de Ciências da Computação", "Departamento de Engenharia Elétrica",
   "Departamento de Engenharia Mecânica", "Departamento de Administração", "Departamento de Economia",
   "Departamento de Matemática", "Faculdade de Direito", "Faculdade de Medicina", "Departamento de Engenharia Civil e Ambiental"
