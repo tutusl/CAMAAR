@@ -1,0 +1,10 @@
+<div class="container">
+  <%= form_with url: password_reset_path, method: :post, html: {class: "form-login"} do |f| %>
+    <h1 class="form-login-header">Redefinir Senha</h1>
+    <div class="form-login-group">
+      <%= f.label :email, "Email" %>
+      <%= f.email_field :email, class: "form-login-control", required: true %>
+    </div>
+    <%= f.submit "Enviar Instruções", class: "form-login-btn" %>
+  <% end %>
+</div>

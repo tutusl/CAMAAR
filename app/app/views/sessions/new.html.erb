@@ -1,17 +1,31 @@
 <div class="container">
-  <%= form_with url: sessions_path, method: :post, local: true, html: {class: "form-login"} do |form| %>
-    <h1 class="form-login-header">CAMAAR</h1>
-    <p class="form-login-text">Faça seu login</p>
-    <div class="form-login-group">
+  <!-- Display Flash Notice -->
+  <% if flash[:notice] %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  <h1>Login</h1>
+  <%= form_with(url: sessions_path, method: :post, local: true, html: {claass: "form-login"}) do |form| %>
+    <div class="form-group">
       <%= form.label :email, "Email" %>
-      <%= form.email_field :email, class: "form-login-control", placeholder: "Digite seu email", required: true %>
+      <%= form.email_field :email, class: "form-control", placeholder: "Digite seu email", required: true %>
     </div>
-    <div class="form-login-group">
+    <div class="form-group">
       <%= form.label :password, "Senha" %>
-      <%= form.password_field :password, class: "form-login-control", placeholder: "Digite sua senha", required: true %>
+      <%= form.password_field :password, class: "form-control", placeholder: "Digite sua senha", required: true %>
+    </div>
+    <div class="form-group">
+      <%= form.submit "Entrar", class: "btn btn-primary" %>
     </div>
     <div class="form-login-group">
-      <%= form.submit "Entrar", class: "form-login-btn" %>
+    <%= link_to "Esqueceu sua senha?", new_password_reset_path, class: "text-secondary" %>
     </div>
   <% end %>
 </div>

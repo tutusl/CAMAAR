@@ -18,4 +18,16 @@ class Usuario < ApplicationRecord
   def admin?
     papel == 'administrador'
   end
+
+  def generate_password_reset_token!
+    self.password_reset_token = SecureRandom.urlsafe_base64
+    self.password_reset_sent_at = Time.current
+    save!(validate: false)
+
+    return self.password_reset_token
+  end
+  
+  def password_reset_expired?
+    password_reset_sent_at < 5.hours.ago
+  end
 end
