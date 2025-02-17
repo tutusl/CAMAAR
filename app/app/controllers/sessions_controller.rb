@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       if @usuario.papel == 'administrador'
         redirect_to respostas_path
       else
-        redirect_to avaliacoes_path
+        redirect_to formularios_path
       end
     else
       flash[:notice] = 'Login inválido!'
