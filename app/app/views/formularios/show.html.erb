@@ -1,0 +1,19 @@
+<%= render 'shared/sidebar' %>
+<div class="container-formularios">
+  <h2>Formulário: <%= @formulario.template.nomeTemplate %></h2>
+
+  <h3>Questões</h3>
+  <% @questaos.each do |questao| %>
+    <div class="form-group">
+      <label><%= questao.enunciado %></label>
+      <% if @respostas.any? %>
+        <% resposta = @respostas.find_by(questao_id: questao.id) %>
+        <p><strong>Resposta:</strong> <%= resposta&.valorResposta%></p>
+      <% else %>
+        <p><strong>Resposta:</strong> Nenhuma resposta fornecida</p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= link_to "Voltar", formularios_path, class: "btn btn-secondary" %>
+</div>

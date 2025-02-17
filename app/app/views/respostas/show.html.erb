@@ -1,17 +1,12 @@
 <%= render 'shared/sidebar' %>
+<div class="container-respostas">
+  <h2>Detalhes da Resposta</h2>
 
-<div class="container">
-  <h2>Detalhes do Formulário</h2>
+  <p><strong>Formulário:</strong> <%= @resposta.formulario.template.nomeTemplate %></p>
+  <p><strong>Questão:</strong> <%= @resposta.questao.enunciado %></p>
+  <p><strong>Resposta:</strong> <%= @resposta.valorResposta %></p>
+  <p><strong>Data da Resposta:</strong> <%= @resposta.dataResposta.strftime('%d/%m/%Y %H:%M') %></p>
+  <p><strong>Respondido por:</strong> <%= @resposta.usuario.nome %></p>
 
-  <% @estatisticas.each do |estatistica| %>
-    <div class="mb-4">
-      <h4><%= estatistica[:questao] %></h4>
-      <% estatistica[:respostas].each do |resposta, porcentagem| %>
-        <p>
-          <strong><%= resposta %>:</strong> <%= porcentagem %>%
-        </p>
-      <% end %>
-    </div>
-    <hr>
-  <% end %>
+  <%= link_to "Voltar", formulario_path(@resposta.formulario), class: "btn btn-secondary" %>
 </div>
