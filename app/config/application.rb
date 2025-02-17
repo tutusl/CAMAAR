@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -25,6 +27,6 @@ module App
     # config.eager_load_paths << Rails.root.join("extras")
     config.after_initialize do
       Rails.application.load_seed if Rails.env.development?
-    end 
+    end
   end
 end

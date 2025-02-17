@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 # config/routes.rb
 Rails.application.routes.draw do
-  root to: "sessions#new"
+  root to: 'sessions#new'
   get '/usuarios/alterar_senha', to: 'usuarios#alterar_senha_form', as: 'alterar_senha_form'
-  resources :importadados, only: [:new, :create]
+  resources :importadados, only: %i[new create]
   resources :usuarios do
     member do
       get :edit
@@ -10,12 +12,10 @@ Rails.application.routes.draw do
       post :alterar_senha # Kept from feat/adding_more_tests branch
     end
   end
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :respostas, only: [:index, :show]
+  resources :sessions, only: %i[new create destroy]
+  resources :respostas, only: %i[index show]
   resources :formularios
   resources :templates
-  
-  if Rails.env.development?
-    mount LetterOpenerWeb::Engine, at: "/emails"
-  end
+
+  mount LetterOpenerWeb::Engine, at: '/emails' if Rails.env.development?
 end

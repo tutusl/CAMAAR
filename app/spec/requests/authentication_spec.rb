@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Authentication', type: :request do
@@ -6,11 +8,11 @@ RSpec.describe 'Authentication', type: :request do
   describe 'POST /login' do
     context 'with valid credentials' do
       before do
-        post login_path, params: { 
-          session: { 
-            email: user.email, 
-            password: user.password 
-          } 
+        post login_path, params: {
+          session: {
+            email: user.email,
+            password: user.password
+          }
         }
       end
 
@@ -29,11 +31,11 @@ RSpec.describe 'Authentication', type: :request do
 
     context 'with invalid credentials' do
       before do
-        post login_path, params: { 
-          session: { 
-            email: 'wrong@email.com', 
-            password: 'wrongpass' 
-          } 
+        post login_path, params: {
+          session: {
+            email: 'wrong@email.com',
+            password: 'wrongpass'
+          }
         }
       end
 

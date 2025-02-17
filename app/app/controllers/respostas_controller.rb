@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RespostasController < ApplicationController
   before_action :require_login
   before_action :verificar_permissao
@@ -26,6 +28,6 @@ class RespostasController < ApplicationController
   private
 
   def verificar_permissao
-    redirect_to root_path, alert: "Acesso negado!" unless current_user&.admin?
+    redirect_to root_path, alert: 'Acesso negado!' unless current_user&.admin?
   end
 end

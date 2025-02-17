@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/models/template.rb
 class Template < ApplicationRecord
   has_many :formularios

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # features/support/env.rb
 
 # Carrega o ambiente Rails
@@ -40,7 +42,7 @@ Before do
   DatabaseCleaner.start
 end
 
-After do |scenario|
+After do |_scenario|
   DatabaseCleaner.clean
   Capybara.reset_session! # Limpa a sessão do Capybara após cada cenário
 end

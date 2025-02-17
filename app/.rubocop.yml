@@ -1,8 +1,10 @@
-# Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+AllCops:
+  TargetRubyVersion: 3.4 # Specify the Ruby version your project uses
+  NewCops: enable # Enable new cops by default
+  Exclude:
+    - 'db/**/*' # Exclude database-related files
+    - 'bin/**/*' # Exclude executable scripts
+    - 'vendor/**/*' # Exclude third-party libraries
 
-# Overwrite or add rules to create your own house style
-#
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+Metrics/CyclomaticComplexity:
+  Max: 10

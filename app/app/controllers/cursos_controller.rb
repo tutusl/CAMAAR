@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CursosController < ApplicationController
   def create(cursos_data)
     cursos_data.each do |curso|

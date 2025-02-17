@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
-    factory :template do
-      sequence(:nomeTemplate) { |n| "Template #{n}" }
-      dataCriacao { Time.current }
-      semestre { "2023.1" }
-    end
+  factory :template do
+    sequence(:nomeTemplate) { |n| "Template #{n}" }
+    dataCriacao { Time.current }
+    semestre { '2023.1' }
+  end
 end
