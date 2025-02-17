@@ -1,8 +1,5 @@
-  <div class="questao-fields">
-  <%= f.hidden_field :tipoQuestao, value: "Dissertativa" %>
-
-  <%= f.label :enunciado, "Enunciado", class: "form-label" %>
-  <%= f.text_area :enunciado, class: "form-control form-textarea" %>
-
-  <button type="button" class="btn btn-danger remove-questao" data-action="click->template-form#removeQuestion">Remover</button>
+<div class="questao-fields">
+  <%= f.text_field :enunciado %>
+  <%= f.select :tipoQuestao, options_for_select(["Dissertativa", "Múltipla Escolha"]) %>
+  <button type="button" class="btn btn-danger" data-action="click->template-form#removeQuestion">Remover Questão</button>
 </div>

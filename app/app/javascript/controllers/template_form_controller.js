@@ -3,8 +3,12 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   addQuestion(event) {
     event.preventDefault();
-    const template = document.querySelector(".questao-fields").cloneNode(true);
-    template.querySelector("input, textarea, select").value = "";
+    const questaoFields = document.querySelectorAll(".questao-fields");
+    const lastQuestao = questaoFields[questaoFields.length - 1];
+    const template = lastQuestao.cloneNode(true);
+    template.querySelectorAll("input, textarea, select").forEach((field) => {
+      field.value = "";
+    });
     document.querySelector(".questions-container").appendChild(template);
   }
 
