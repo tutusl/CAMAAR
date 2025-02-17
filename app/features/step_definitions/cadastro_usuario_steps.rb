@@ -1,5 +1,5 @@
 Dado("que eu estou na página de cadastro") do
-    visit new_user_registration_path
+    visit new_usuario_path
   end
   
   Quando("eu seleciono o tipo de usuário {string}") do |user_type|

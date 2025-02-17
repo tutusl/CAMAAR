@@ -110,4 +110,9 @@ class UsuariosController < ApplicationController
       :papel, :formacao, :departamento_id, :curso_id
     )
   end
+  def ensure_correct_user
+    unless current_usuario.id.to_s == params[:id]
+      redirect_to root_path, alert: 'Você não tem permissão para essa ação'
+    end
+  end
 end

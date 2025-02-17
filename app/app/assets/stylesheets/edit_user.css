@@ -53,16 +53,16 @@
     font-size: 14px;
   }
 
-.body-alterar-senha-container{
-  background-color: #0F1A2B;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .body-alterar-senha-container{
+    background-color: #0F1A2B;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,106 @@
+/* Estilização do título */
+.container-templates {
+  margin-left: 270px; /* Ajuste para a sidebar */
+  padding: 30px;
+  max-width: calc(100% - 270px);
+}
+/* Cabeçalho */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid de templates */
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilos do card */
+.template-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.template-card:hover {
+  transform: scale(1.02);
+}
+
+/* Nome do template */
+.template-card h3 a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.template-card h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Data de criação */
+.text-gray-500 {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Ações */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  height: 20px;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+/* Botão de Novo Template */
+.btn-primary {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  width: 200px;
+}
+
+/* Alerta quando não há templates */
+.alert {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}

@@ -78,6 +78,7 @@ group :test do
   gem 'webmock'
   gem 'vcr'
   gem 'rails-controller-testing'
+  gem 'byebug'
 end
 
 group :development, :test do

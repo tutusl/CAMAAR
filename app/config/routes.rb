@@ -7,13 +7,13 @@ Rails.application.routes.draw do
     member do
       get :edit
       patch :update
-      post :alterar_senha # Adicionando esta linha
+      post :alterar_senha # Kept from feat/adding_more_tests branch
     end
   end
   resources :sessions, only: [:new, :create, :destroy]
   resources :respostas, only: [:index, :show]
   resources :formularios
-  resources :templates # Adicionando esta linha
+  resources :templates
   
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/emails"

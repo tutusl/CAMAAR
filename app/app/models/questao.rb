@@ -2,6 +2,6 @@
 class Questao < ApplicationRecord
   belongs_to :template
 
-  validates :tipo, presence: true
+  validates :tipoQuestao, presence: true
   validates :enunciado, presence: true
 end

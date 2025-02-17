@@ -1,7 +1,7 @@
 Quando("ele acessar a página {string}") do |page_name|
     case page_name
     when "Importar dados SIGAA"
-      visit importar_dados_path
+      visit new_importadado_path
     end
   end
   
@@ -29,4 +29,8 @@ Quando("ele acessar a página {string}") do |page_name|
   
   Então("a base de dados do sistema CAMAAR deve ser atualizada com as informações importadas") do
     expect(Turma.count).to eq(2)
+  end
+
+  E("clicar no botão {string}") do |button|
+    click_button(button)
   end
