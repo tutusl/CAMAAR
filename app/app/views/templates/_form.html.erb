@@ -16,12 +16,15 @@
 
   <!-- Questões -->
   <div class="questions-container">
-    <h3>Questões</h3>
+    <h2 class="questions-title">Questões</h2>
     <div data-controller="template-form">
+      <!-- Loop para renderizar as questões existentes -->
       <%= form.fields_for :questaos do |q| %>
         <%= render 'templates/questao_fields', f: q %>
       <% end %>
-      <button type="button" class="btn btn-success add-questao" data-action="click->template-form#addQuestion">Adicionar Questão</button>
+
+      <!-- Botão para adicionar novas questões -->
+      <button type="button" class="btn btn-success add-questao" data-action="click->template-form#addQuestion">Adicionar nova questão</button>
     </div>
   </div>
 
