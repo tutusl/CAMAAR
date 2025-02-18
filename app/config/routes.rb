@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :formularios
   resources :templates
   resources :cursos, only: [:create]
+  resources :departamentos, only: [:create]
 
   mount LetterOpenerWeb::Engine, at: '/emails' if Rails.env.development?
 end
