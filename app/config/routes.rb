@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :respostas, only: %i[index show]
   resources :formularios
   resources :templates
+  resources :cursos, only: [:create]
 
   mount LetterOpenerWeb::Engine, at: '/emails' if Rails.env.development?
 end
