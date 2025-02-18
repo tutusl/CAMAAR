@@ -11,7 +11,7 @@ class UserMailer < ApplicationMailer
 
   def email_alterar_senha(usuario)
     @usuario = usuario
-    @url = edit_password_reset_url(token: @usuario.password_reset_token)
+    @url = edit_password_reset_url(user: @usuario)
     mail(to: @usuario.email, subject: 'Redefinição de Senha')
   end
   

@@ -7,6 +7,6 @@
     <h1>Olá, <%= @usuario.nome %>!</h1>
     <p>Foi solicitada a alteração de senha para a sua conta no sistema CAMAAR.</p>
     <p>Para redefinir sua senha, clique no link:</p>
-    <%= link_to "Redefinir Senha", password_reset_url(token: @usuario.password_reset_token) %>
+    <%= link_to "Redefinir Senha", edit_password_reset_url(user: @usuario) %>
   </body>
 </html>
