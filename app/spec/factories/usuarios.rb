@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
+# spec/factories/usuarios.rb
 FactoryBot.define do
   factory :usuario do
     sequence(:matricula) { |n| "2023000#{n}" }
@@ -8,10 +7,10 @@ FactoryBot.define do
     password { 'password123' }
     password_confirmation { 'password123' }
     formacao { Faker::Educator.degree }
-
     association :curso, factory: :curso
     association :departamento
 
+    # Default value for papel
     trait :aluno do
       papel { 'aluno' }
     end
@@ -23,6 +22,13 @@ FactoryBot.define do
     trait :administrador do
       papel { 'administrador' }
       curso { nil }
+    end
+
+    # Ensure a default role if no trait is specified
+    initialize_with do
+      attrs = attributes.dup
+      attrs[:papel] ||= 'aluno'
+      new(attrs)
     end
   end
 end
